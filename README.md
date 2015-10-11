@@ -11,7 +11,7 @@ Il est exclusivement compatible avec la **version 1.29 de Dofus**.
 - Effets
 - Effets encodés.
 
-*Attention*, tous les effets ne sont pas gérés mais les principaux sont gérés.(Cf. Effects.md)
+***Attention***, tous les effets ne sont pas gérés mais les principaux sont gérés.(Cf. Effects.md)
 
 ## Utilisation
 Se réferer au fichier `index.php` sinon :
