@@ -1,6 +1,6 @@
 <?php 
 include('library.php');
-$Object = new Object(3485, 11500);
+$Object = new Object(3485);
 ?>
 <HTML>
 <head>
@@ -17,8 +17,8 @@ $Object = new Object(3485, 11500);
 	<?= $Object->effects_encode(); ?>
 	<br>
 	<p>Ligne SQL</p>
-	<textarea style="width:700px;height:100px"><?= $Object->sql_line(); ?></textarea><br/>
+	<textarea style="width:700px;height:100px">INSERT INTO item_template (`id`, `name`, `type`, `level`, `statsTemplate`) VALUES (, , , , );</textarea><br/>
 	<p>Ligne SWF</p>
-	<textarea style="width:700px;height:100px"><?= $Object->swf_line(); ?></textarea>
+	<textarea style="width:700px;height:100px">I.u[] = {p: 1, w: 0, fm: true, wd: true, l: , g: , ep: 0, d: "", t: , n: ""};</textarea>
 </body>
 </HTML>

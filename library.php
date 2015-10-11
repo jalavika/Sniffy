@@ -1,11 +1,18 @@
 <?php
 
+/*
+|--------------------------------
+| Library by Synth
+| Please don't change the copyright
+| Take a look on the example.php file
+|--------------------------------
+*/
+
 class Object {
 	
-	public function __construct($id, $item_id)
+	public function __construct($id)
 	{
 		$this->id = $id;
-		$this->item_id = $item_id;
 		$this->source = file_get_contents('http://www.dofusbook.net/fr/encyclopedie/objet/'.$this->id.'.html');
 	}
 
@@ -205,15 +212,5 @@ class Object {
     		}
     	}
     	return $string;
-    }
-
-    public function sql_line()
-    {
-     	return 'INSERT INTO item_template (`id`, `name`, `type`, `level`, `statsTemplate`) VALUES (`'.$this->item_id.'`, `'.addslashes($this->name()).'`, `'.$this->type().'`, `'.$this->level().'`, `'.$this->effects_encode().'`);';
-	}
-
-    public function swf_line()
-    {
-    	return 'I.u['.$this->item_id.'] = {p: 1, w: 0, fm: true, wd: true, l: '.$this->level().', g: '.$this->gfx().', ep: 0, d: "'.addslashes($this->desc()).'", t: '.$this->type().', n: "'.addslashes($this->name()).'"};';
     }
 }
