@@ -107,6 +107,11 @@ class Object {
        		'PM' => 128,
        		'PM -' => 169,
     		'Dommages' => 112,
+    		'Neutre Dommages' => 112,
+    		'Terre Dommages' => 112,
+    		'Feu Dommages' => 112,
+    		'Air Dommages' => 112,
+    		'Eau Dommages' => 112,
     		'Dommages -' => 145,
     		'Puissance' => 138,
     		'Prospection' => 176,
@@ -151,6 +156,7 @@ class Object {
     //Affichage des effets encodés pour Dofus 1.29
     public function effects_encode()
     {
+    	$data = array();
     	$this->effects = $this->textBetween($this->source, '<div class="item-effet"><h2>Effets</h2>', '</div>');
     	$explode = explode('<br/>', $this->effects);
     	$string = '';
@@ -191,13 +197,14 @@ class Object {
 		    		}
 	    		}
                 //Si l'élément n'est pas geré dans la fonction element() on le passe
-	    		if($this->element($type) != NULL){
+	    		if($this->element($type) != NULL && !in_array($this->element($type), $data)){
                     //Récupération des valeurs
 	    			$type = $this->element($type);
 	    			$min = $infos[0];
 	    			$min = (substr_count($get2[0], '-')) ? substr($infos[0], 1) : $min ;
 	    			$max = (substr_count($get2[0], 'à') != 0) ? $infos[2] : 0 ;
 	    			$max = (substr_count($get2[0], '-')) ? substr($max, 1) : $max ;
+	    			array_push($data, $type);
                     //Génération des variables pour la partie random du jet
 	    			$number1 = ($max == 0) ? 0 : 1 ;
                     $number3 = ($max == 0) ? $min : $min - 1;
