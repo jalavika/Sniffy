@@ -26,7 +26,7 @@
 			$Object = new Object($_POST['id']);
 		?>
 		<p>Ligne SQL :</p>
-		<textarea style="width:700px;height:100px">INSERT INTO item_template (`id`, `name`, `type`, `level`, `statsTemplate`) VALUES (<?= $_POST['idd']; ?>, <?= addslashes($Object->name()); ?>, <?= $Object->type(); ?>, <?= $Object->level(); ?>, <?= $Object->effects_encode(); ?>);</textarea><br/>
+		<textarea style="width:700px;height:100px">INSERT INTO item_template (`id`, `name`, `type`, `level`, `statsTemplate`) VALUES (<?= $_POST['idd']; ?>, "<?= addslashes($Object->name()); ?>", <?= $Object->type(); ?>, <?= $Object->level(); ?>, "<?= $Object->effects_encode(); ?>");</textarea><br/>
 		<p>Ligne SWF :</p>
 		<textarea style="width:700px;height:100px">I.u[<?= $_POST['idd']; ?>] = {p: 1, w: 0, fm: true, wd: true, l: <?= $Object->level(); ?>, g: <?= $Object->gfx(); ?>, ep: 0, d: "<?= addslashes($Object->desc()); ?>", t: <?= $Object->type(); ?>, n: "<?= addslashes($Object->name()); ?>"};</textarea>
 		<?php } ?>
