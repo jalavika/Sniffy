@@ -3,7 +3,7 @@ Item Sniffer est une **librairie PHP** permettant de récupérer toutes les info
 Il est exclusivement compatible avec la **version 1.29 de Dofus**.
 
 
-La librairie n'est plus à jour, veuillez utiliser [Dofus1.29.Sync](https://github.com/Synthx/Dofus1.29.Sync) pour récupérer tous les items
+***Note*** La librairie n'est plus à jour, veuillez utiliser [Dofus1.29.Sync](https://github.com/Synthx/Dofus1.29.Sync) pour récupérer tous les items
 
 ## Fonctionnalités
 - Description
