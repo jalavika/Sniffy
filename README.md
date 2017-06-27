@@ -1,4 +1,4 @@
-# Item Sniffer
+:# Item Sniffer
 Item Sniffer est une **librairie PHP** permettant de récupérer toutes les informations essentielles à la création d'un item sans avoir à créer ses stats et ses lignes.
 Il est exclusivement compatible avec la **version 1.29 de Dofus**.
 
