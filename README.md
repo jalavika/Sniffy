@@ -2,6 +2,9 @@
 Item Sniffer est une **librairie PHP** permettant de récupérer toutes les informations essentielles à la création d'un item sans avoir à créer ses stats et ses lignes.
 Il est exclusivement compatible avec la **version 1.29 de Dofus**.
 
+
+La librairie n'est plus à jour, veuillez utiliser [Dofus1.29.Sync](https://github.com/Synthx/Dofus1.29.Sync) pour récupérer tous les items
+
 ## Fonctionnalités
 - Description
 - Nom
@@ -20,5 +23,5 @@ Se réferer au fichier `index.php` sinon :
 - Créer un objet en utilisant le code `$object = new Object(3522);`.
 - La librarie est prête, exemple d'utilisation `$object->desc();` pour récupérer la description de l'objet.
 
-## Screenshots
+## Screenshot
 ![image](http://image.noelshack.com/fichiers/2015/41/1444582326-screen.jpg)
